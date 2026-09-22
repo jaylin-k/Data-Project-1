@@ -3,13 +3,11 @@
 from pathlib import Path
 
 import pandas as pd
-
+import numpy as np
 
 def clean_data(path: str | Path) -> pd.DataFrame:
 	
-	data = pd.read_csv(path)
-	data.columns = data.columns.str.strip().str.lower().str.replace(" ", "_", regex=False)
-	data = data.drop_duplicates()
+	excel_file = pd.read_excel(path)
 
 	for column in data.select_dtypes(include="number"):
 		data[column] = data[column].fillna(data[column].median())
