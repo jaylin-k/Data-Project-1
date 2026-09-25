@@ -18,7 +18,7 @@ def clean_data(first_file, second_file):
 
     merged_data.to_csv('cleaned_marketing_master.csv', index=False)
     print("Pipline complete. 'clean_marketing_master.csv' is ready to use for SQL.")
-
+    
     return merged_data
 
 def main():
