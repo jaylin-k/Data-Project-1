@@ -6,7 +6,6 @@ def clean_data(first_file, second_file):
 
     data1 = pd.read_excel(first_file)
     data2 = pd.read_excel(second_file)
-    # revenue = pd.read_excel('traffic_raw.xlsx')
     merged_data = pd.merge(data1, data2, on=['user_id', 'date'], how='left')
     merged_data.columns = merged_data.columns.str.strip().str.lower().str.replace(" ", "_", regex=False)
     merged_data = merged_data.drop_duplicates()
@@ -21,7 +20,7 @@ def clean_data(first_file, second_file):
 
 if __name__ == "__main__":
     clean_data('traffic_raw.xlsx', 'revenue_raw.xlsx')
-    
+
 # import pandas as pd
 # import numpy as np
 
