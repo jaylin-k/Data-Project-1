@@ -8,7 +8,7 @@
 * **Data Warehousing & Analytics:** Google BigQuery (SQL)
 * **Business Intelligence:** Power BI
 
-### ⚙️ Pipeline Architecture
+### Pipeline Architecture
 1. **Extraction (Excel):** Evaluated raw data schemas across disconnected traffic logs and e-commerce transactional files.
 2. **Transformation (Python):** Automated data cleansing via a custom Pandas script to programmatically resolve missing values and execute an optimized data-merge -- mapping traffic timestamps to conversions.
 3. **Analysis (SQL):** Ingested the production-ready dataset into BigQuery to calculate metrics including conditional order frequencies, conversion percentages, and Average Order Value.
